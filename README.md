@@ -10,6 +10,7 @@
   ~ Management of basic gameplay elements <br />
   ~ Usage of minilibX library
 <br />
+<br />
 :memo:	How to Execute:<br />
   ~git clone https://github.com/vytkuklys/42HN-So_Long.git so_long<br>
   cd so_long<br>
