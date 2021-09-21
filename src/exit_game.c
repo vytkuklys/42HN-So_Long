@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:06:38 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 20:10:07 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 20:07:13 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int	exit_game(t_so_long **data, int flag)
 	free_array(&(*data)->map);
 	free(*data);
 	*data = NULL;
-
 	if (flag)
 		exit(EXIT_SUCCESS);
 	exit(EXIT_FAILURE);

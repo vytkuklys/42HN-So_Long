@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:52:01 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 21:03:59 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 19:59:32 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_so_long	*data;
-	char 		*file_name;
+	char		*file_name;
 
 	if (argc != 2)
 	{
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 		write(1, "Error\nError occurred when opening the file", 42);
 		exit(EXIT_FAILURE);
 	}
+	ft_initialize_screen(&data);
 	if (!is_map_valid(&data))
 		exit_game(&data, 0);
 	display_game(&data);

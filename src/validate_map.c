@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:06:25 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 19:50:45 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 18:43:15 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	exists_invalid_character(t_so_long **data)
 		{
 			if (!((*data)->map[y][x] == 'E' || (*data)->map[y][x] == 'C' ||
 				(*data)->map[y][x] == 'P' || (*data)->map[y][x] == '1' ||
-				(*data)->map[y][x] == ' '))
+				(*data)->map[y][x] == '0'))
 			{
 				return (1);
 			}

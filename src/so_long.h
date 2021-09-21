@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 16:55:52 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 20:09:47 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 19:00:23 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,10 @@ int			is_map_valid(t_so_long **data);
 void		free_array(char ***arr);
 int			exit_game(t_so_long **data, int flag);
 char		*ft_itoa(int n);
-void		ft_initialise_data(t_so_long **data);
+void		ft_initialize_data(t_so_long **data);
 int			exists_character(t_so_long **data, char c);
 void		handle_allocation_error(t_so_long **data);
+void		display_line(char **s, void *mlx_ptr, void *win_ptr, int y);
+void		ft_initialize_screen(t_so_long **data);
 
 #endif

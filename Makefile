@@ -2,7 +2,7 @@
 
 FRAMEWORKS=-framework OpenGL -framework AppKit
 FLAGS=-Werror -Wextra -Wall
-NAME=solong
+NAME=so_long
 SRC=src/*.c
 INCLUDES=gnl/gnl.a minilibx/libmlx.a
 

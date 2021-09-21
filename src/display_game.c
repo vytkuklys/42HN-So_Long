@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 20:30:38 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 19:02:47 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 19:44:15 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void	display_map(char ***s, void *mlx_ptr, void *win_ptr)
 {
 	char	**tmp;
-	int		i;
+	int		y;
 
 	tmp = *s;
-	i = 0;
-	while (tmp[i] != NULL)
+	y = 0;
+	while (tmp[y] != NULL)
 	{
-		mlx_string_put(mlx_ptr, win_ptr, 0, 14 * (1 + i), 0x42f5b6, tmp[i]);
-		i++;
+		display_line(&tmp[y], mlx_ptr, win_ptr, y);
+		y++;
 	}
 }
 
@@ -34,7 +34,7 @@ void	display_movement_count(t_so_long **data)
 	if (num == NULL)
 		handle_allocation_error(data);
 	mlx_string_put((*data)->mlx_ptr, (*data)->win_ptr,
-		(*data)->width * 3, 14 * (2 + (*data)->height), 0xffff00, num);
+		12, 16, 0x00000f, num);
 	free(num);
 }
 
@@ -42,7 +42,7 @@ void	update_map(t_so_long **data, int x, int y)
 {
 	if ((*data)->map[y][x] != '1' && (*data)->map[y][x] != 'E')
 	{
-		(*data)->map[(*data)->player_y][(*data)->player_x] = ' ';
+		(*data)->map[(*data)->player_y][(*data)->player_x] = '0';
 		(*data)->map[y][x] = 'P';
 		(*data)->player_x = x;
 		(*data)->player_y = y;

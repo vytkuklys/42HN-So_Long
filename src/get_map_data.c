@@ -6,7 +6,7 @@
 /*   By: vkuklys <vkuklys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 17:08:05 by vkuklys           #+#    #+#             */
-/*   Updated: 2021/08/22 20:10:03 by vkuklys          ###   ########.fr       */
+/*   Updated: 2021/09/20 19:42:51 by vkuklys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	get_perimeter(char *file_name, t_so_long **data)
 {
-	char	*line;
-    int			fd;
+	char		*line;
+	int			fd;
 
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
@@ -42,10 +42,7 @@ void	add_longitude_data(char **map, char *line)
 	j = 0;
 	while (line != NULL && line[j] != '\0' && line[j] != '\n')
 	{
-		if (line[j] == '0')
-			tmp[j] = ' ';
-		else
-			tmp[j] = line[j];
+		tmp[j] = line[j];
 		j++;
 	}
 	tmp[j] = '\0';
@@ -55,7 +52,7 @@ int	read_line(char *file_name, t_so_long **data)
 {
 	char	*line;
 	int		i;
-	int			fd;
+	int		fd;
 
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
@@ -105,8 +102,9 @@ void	get_player_pos(t_so_long **data)
 t_so_long	*get_map_data(char *file_name)
 {
 	t_so_long	*data;
+
 	data = (t_so_long *)malloc(sizeof(t_so_long));
-	ft_initialise_data(&data);
+	ft_initialize_data(&data);
 	if (get_perimeter(file_name, &data) || read_line(file_name, &data))
 	{
 		free(data);
